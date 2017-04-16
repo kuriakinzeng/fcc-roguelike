@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  background-color: #222;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.tileRow {
+  height: 1em;
+}
+
+.tile {
+  width: 1em;
+}
+
+.path{
+  background-color: white;
+}
+
+.wall {
+  background-color: gray;
+}
+
+.player {
+  background-color: blue;
+}
+
+.enemy {
+  background-color: red;
+}
+
+.potion {
+  background-color: green;
+}
