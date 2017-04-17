@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="container">
-          <h3>Rogue Game</h3>
+          <h3>Rogue-like Game by <a href="http://kuriakinzeng.com">Kuri</a></h3>
           {
             this.props.isRunning ?
               (<div>
