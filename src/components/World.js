@@ -72,7 +72,7 @@ class World extends Component {
 
     renderTiles(row, y) {
         return row.map((tileClass, x) => {
-            let isFar = Math.abs(x-this.props.player.coordinates.x) > 2 || Math.abs(y-this.props.player.coordinates.y) > 2
+            let isFar = Math.abs(x-this.props.player.coordinates.x) > 2 || Math.abs(y-this.props.player.coordinates.y) > 2;
             if(this.props.darkness && isFar){
                 tileClass += ' dark';
             }
