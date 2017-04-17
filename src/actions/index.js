@@ -11,6 +11,6 @@ export const levelUp = createAction(actions.LEVEL_UP);
 export const attackUp = createAction(actions.ATTACK_UP);
 export const weaponUp = createAction(actions.WEAPON_UP);
 export const move = createAction(actions.MOVE);
-export const xpGained = createAction(actions.XP_GAINED);
 export const enemyHpDown = createAction(actions.ENEMY_HP_DOWN);
+export const enemyKilled = createAction(actions.ENEMY_KILLED);
 export const bossHpDown = createAction(actions.BOSS_HP_DOWN);

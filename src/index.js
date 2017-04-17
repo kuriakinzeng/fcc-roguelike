@@ -16,7 +16,6 @@ if(process.env.NODE_ENV !== 'production'){
 } 
 
 const store = createStore(reducers,applyMiddleware(...middleware))
-
 ReactDOM.render(
   <Provider store={store}>
     <App />

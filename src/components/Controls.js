@@ -20,7 +20,7 @@ class Controls extends Component {
                         Attack: {this.props.player.weaponLevel * this.props.player.playerLevel}
                     </div>
                     <div className="col">
-                        XP: {this.props.player.xp}
+                        Next Level: {this.props.player.nextLevel}
                     </div>
                 </div>
                 <div className="row">

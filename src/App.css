@@ -1,12 +1,16 @@
-.App {
+body {
   text-align: center;
-  background-color: #222;
-  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+table {
+  margin: auto;
 }
 
 .tileRow {
@@ -26,7 +30,7 @@
 }
 
 .player {
-  background-color: blue;
+  background-color: black;
 }
 
 .enemy {
@@ -35,4 +39,12 @@
 
 .potion {
   background-color: green;
+}
+
+.boss {
+  background-color: darkred;
+}
+
+.weapon {
+  background-color: blue;
 }
