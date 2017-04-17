@@ -24,21 +24,6 @@ class App extends Component {
   }
 
   render() {
-    /*return (
-      <div className="App">
-        {this.renderEndGame("RE")}
-        {
-          this.props.isRunning && (
-              <div className="container">
-                <h3>Rogue Game</h3>
-                <Controls />
-                <hr />
-                <World />
-              </div>
-            )
-        }
-      </div>
-    )*/
     return (
       <div className="App">
         <div className="container">

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addVector, getMoveVector } from '../lib/utils'
-import { move, enemyHpDown, bossHpDown, playerHpDown, enemyKilled, playerHpUp, weaponUp, playerLost, playerWon, levelUp } from '../actions';
+import { move, enemyHpDown, bossHpDown, playerHpDown, enemyKilled, 
+    playerHpUp, weaponUp, playerLost, playerWon, levelUp } from '../actions';
 
 class World extends Component {
     constructor(props){
@@ -69,15 +70,19 @@ class World extends Component {
         }
     }
 
-    renderTiles(row) {
-        return row.map((tileClass, idx) => {
-            return <td className={`tile ${tileClass}`} key={idx}> </td>
+    renderTiles(row, y) {
+        return row.map((tileClass, x) => {
+            let isFar = Math.abs(x-this.props.player.coordinates.x) > 2 || Math.abs(y-this.props.player.coordinates.y) > 2
+            if(this.props.darkness && isFar){
+                tileClass += ' dark';
+            }
+            return <td className={`tile ${tileClass}`} key={x}> </td>
         });
     }
 
     renderRows() {
         return this.props.map.map((row, idx) => {
-            return <tr key={idx} className="tileRow">{this.renderTiles(row)}</tr>
+            return <tr key={idx} className="tileRow">{this.renderTiles(row, idx)}</tr>
         });
     }
 
@@ -97,7 +102,7 @@ class World extends Component {
 }
 
 const mapStateToProps = (state) => ({ map: state.map, player: state.player, enemies: state.enemies, 
-    isRunning: state.isRunning, isWon: state.isWon, boss: state.boss });
+    isRunning: state.isRunning, isWon: state.isWon, boss: state.boss, darkness: state.darkness });
 
 export default connect(mapStateToProps, {
     move, enemyHpDown, bossHpDown, playerHpDown,

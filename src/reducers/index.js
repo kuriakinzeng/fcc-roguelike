@@ -125,7 +125,7 @@ const INITIAL_ENEMIES = generateEnemies(filledMap);
 const INITIAL_BOSS = generateBoss(filledMap);
 const INITIAL_POTIONS = generatePotions(filledMap);
 const INITIAL_WEAPONS = generateWeapons(filledMap);
-const INITIAL_DARKNESS = false;
+const INITIAL_DARKNESS = true;
 const INITIAL_MAP = filledMap;
 const INITIAL_STATE = {
     isRunning: true,
@@ -228,12 +228,15 @@ export default handleActions({
             isWon: false,
             map: newMap,
             player: player,
-            darkness: false,
+            darkness: true,
             enemies,
             potions,
             weapons,
             boss
         };
+    },
+    [actions.TOGGLE_DARKNESS]: (state,action) => {
+        return { ...state, darkness: !state.darkness }
     }
 }, INITIAL_STATE)
 
